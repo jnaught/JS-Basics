@@ -21,7 +21,10 @@ var isTyler = (name) => {
 
   //Code Here
 var getName= () => {
-  prompt("Enter your name!");
+  var pName= prompt("Enter your name!");
+  
+  return pName;
+
 }
 
 //////////////////PROBLEM 3////////////////////
@@ -32,8 +35,10 @@ var getName= () => {
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
-
-
+var welcome = () => {
+alert("Welcome, " + getName());  
+}
+//welcome();
 //////////////////PROBLEM 4////////////////////
 
 
@@ -41,7 +46,7 @@ var getName= () => {
 
 //What is the difference between arguments and parameters?
 
-  //Answer Here
+  //Answer Here: Arguments are data passed into a parameter, Parameter is the variable in the declaration of a function
 
 
 //////////////////PROBLEM 5////////////////////
@@ -52,7 +57,8 @@ var getName= () => {
 
 
   //Answer Here
-
+// null, false, 0, undefined, "", NaN
+// === or !===
 
 
 //////////////////PROBLEM 6////////////////////
@@ -62,15 +68,18 @@ var getName= () => {
 //Create a function called myName that returns your name
 
   //Code Here
-  
+  var myName = () => {
+    return "Aaron";
+  }
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+  var newMyName = myName;
 
 //Now alert the result of invoking newMyName
-
+ // alert(newMyName());
 
 
 //////////////////PROBLEM 7////////////////////
@@ -80,9 +89,10 @@ var getName= () => {
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+var outerFn = () => () => "Aaron"
 //Now save the result of invoking outerFn into a variable called innerFn.
-
+var innerFn = outerFn();
   //Code Here
 
 //Now invoke innerFn.
+innerFn;
